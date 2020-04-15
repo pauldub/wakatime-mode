@@ -7,7 +7,7 @@
 ;; Website: https://activitywatch.net
 ;; Homepage: https://github.com/pauldub/activity-watch-mode
 ;; Keywords: calendar, comm
-;; Package-Requires: ((emacs "25") (projectile "0") (request "0") (json "0") (cl-lib "0"))
+;; Package-Requires: ((emacs "25") (request "0") (json "0") (cl-lib "0"))
 ;; Version: 1.0.2
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -34,7 +34,7 @@
 ;; Requires request.el (https://tkf.github.io/emacs-request/)
 ;;
 
-;;; Dependencies: request, projectile, json, cl-lib
+;;; Dependencies: request, json, cl-lib
 
 ;;; Code:
 
