@@ -304,6 +304,12 @@ Argument DEFER Wether initialization should be deferred."
   (activity-watch--stop-idle-timer))
 
 ;;;###autoload
+(defun activity-watch-refresh-project-name ()
+  "Recompute the name of the project for the current file."
+  (interactive)
+  (activity-watch--get-project t))
+
+;;;###autoload
 (define-minor-mode activity-watch-mode
   "Toggle Activity-Watch (Activity-Watch mode)."
   :lighter    " activity-watch"
