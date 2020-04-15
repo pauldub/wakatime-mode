@@ -206,7 +206,7 @@ specified in `activity-watch-project-name-resolvers'."
                                   (type . "app.editor.activity")))
              :headers '(("Content-Type" . "application/json"))
              :success (cl-function
-                       (lambda (&allow-other-keys)
+                       (lambda (&rest _ &allow-other-keys)
                          (setq activity-watch-bucket-created t))))))
 
 (defun activity-watch--create-heartbeat (time)
