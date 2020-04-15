@@ -212,12 +212,12 @@ specified in `activity-watch-project-name-resolvers'."
 (defun activity-watch--create-heartbeat (time)
   "Create heartbeart to sent to the activity watch server.
 Argument TIME time at which the heartbeat was computed."
-  (let ((project-name (projectile-project-name))
+  (let ((project-name (activity-watch--get-project))
         (file-name (buffer-file-name (current-buffer))))
     `((timestamp . ,(ert--format-time-iso8601 time))
       (duration . 0)
       (data . ((language . ,(if (activity-watch--s-blank (symbol-name major-mode)) "unknown" major-mode))
-               (project . ,(if (activity-watch--s-blank project-name) "unknown" project-name))
+               (project . ,project-name)
                (file . ,(if (activity-watch--s-blank file-name) "unknown" file-name)))))))
 
 
