@@ -42,6 +42,7 @@
 (require 'request)
 (require 'json)
 (require 'cl-lib)
+(require 'subr-x)
 
 (defconst activity-watch-version "1.0.0")
 (defconst activity-watch-user-agent "emacs-activity-watch")
